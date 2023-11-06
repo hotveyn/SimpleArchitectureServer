@@ -4,7 +4,7 @@ import { baseLogger } from "../logger/base.logger.js";
 class BaseDB extends DB {
 	
 	constructor(logger) {
-		super(logger, process.env.DB_NAME || 'database.sqlite');
+		super(logger, process.env.DB_NAME || '.sqlite.db');
 	}
 }
 
