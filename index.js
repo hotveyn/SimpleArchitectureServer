@@ -1,8 +1,8 @@
-import { baseLogger } from "./logger/base.logger.js";
-import { BaseServer } from "./server/base.server.js";
-import { BaseDatabase } from "./database/base.db.js";
-import { UserEntity } from "./user/user.entity.js";
-import { UserModule } from "./user/user.module.js";
+import { baseLogger } from "./src/logger/base.logger.js";
+import { BaseServer } from "./src/server/base.server.js";
+import { BaseDatabase } from "./src/database/base.db.js";
+import { UserEntity } from "./src/user/user.entity.js";
+import { UserModule } from "./src/user/user.module.js";
 
 
 async function bootstrap() {
