@@ -5,6 +5,7 @@ import { UserEntity } from "./http/user/user.entity.js";
 import { UserModule } from "./http/user/user.module.js";
 import {AuthModule} from "./http/auth/auth.module.js";
 import express from "express";
+import 'dotenv/config'
 import {endOfTimesMiddleware} from "./middleware/end-of-times.middleware.js";
 
 
