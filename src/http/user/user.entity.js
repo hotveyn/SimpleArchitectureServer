@@ -3,9 +3,6 @@ import { Entity } from "../../core/entity.js";
 
 export class UserEntity extends Entity {
 	db;
-	id = "id";
-	login = "login";
-	password = "password";
 
 	static tableName = 'users'
 	static schema = `
@@ -15,7 +12,11 @@ export class UserEntity extends Entity {
 	`;
 	
 	constructor(db) {
-		super(db, 'users')
+		super(db, 'users', { login: 'login', password: 'password'})
+		this.id = "id";
+		this.login = "login";
+		this.password = "password";
+		
 		this.db = db
 	}
 	
