@@ -15,9 +15,9 @@ export class AuthController {
         next(result);
     }
 
-    async registration(req, res) {
+    async registration(req, res, next) {
         const dto = new AuthRegDto(req.body);
         const result = await this.AuthService.registration(dto);
-        ResponseService.success(res, result);
+        next(result);
     }
 }
