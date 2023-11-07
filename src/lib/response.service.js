@@ -1,10 +1,10 @@
 export class ResponseService {
 	
-	static success(res, data) {
-		res.json({
-			success: true,
+	static success(data) {
+		return {
 			code: 200,
+			success: true,
 			data
-		})
+		}
 	}
 }
