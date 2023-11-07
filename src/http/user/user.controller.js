@@ -8,8 +8,12 @@ export class UserController {
 		this.UserService = UserService;
 	}
 	
-	async getAll(req, res) {
+	async getAll(req, res, next) {
 		const result = this.UserService.getAll();
-		ResponseService.success(res, result);
+		next(result)
+	}
+	async getProfile(req, res, next){
+		const result = this.UserService.getProfile(req.user);
+		next(result)
 	}
 }
