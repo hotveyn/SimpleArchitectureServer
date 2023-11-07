@@ -7,4 +7,11 @@ export class ResponseService {
 			data
 		}
 	}
+	static created(data) {
+		return {
+			code: 201,
+			success: true,
+			data
+		}
+	}
 }
