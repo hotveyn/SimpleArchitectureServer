@@ -1,4 +1,4 @@
-import { ResponseService } from "../lib/response.service.js";
+import { ResponseService } from "../../lib/response.service.js";
 
 export class UserController {
 	UserService;

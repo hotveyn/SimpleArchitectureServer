@@ -1,8 +1,12 @@
-import { Entity } from "../core/entity.js";
+import { Entity } from "../../core/entity.js";
 
 
 export class UserEntity extends Entity {
 	db;
+	id = "id";
+	login = "login";
+	password = "password";
+
 	static tableName = 'users'
 	static schema = `
 	id INTEGER PRIMARY KEY,

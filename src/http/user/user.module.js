@@ -2,7 +2,7 @@ import { UserService } from "./user.service.js";
 import { UserEntity } from "./user.entity.js";
 import { UserController } from "./user.controller.js";
 import { UserRouter } from "./user.router.js";
-import { BaseDatabase } from "../database/base.db.js";
+import { BaseDatabase } from "../../database/base.db.js";
 
 export class UserModule {
 	name = "users";
