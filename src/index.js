@@ -19,7 +19,7 @@ async function bootstrap() {
 
 	const server = new BaseServer(baseLogger);
 	server.registerExpressAddon(cors({
-		origin:["http://localhost:5173"],
+		origin:"*",
 		credentials: true,
 		SameSite: false,
 		methods: ["GET", "POST", "PUT", "DELETE"],
