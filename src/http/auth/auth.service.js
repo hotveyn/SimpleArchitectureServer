@@ -25,6 +25,12 @@ export class AuthService {
 	
 	registration(dto) {
 		const table = this.UserEntity.tableName;
+		const alreadyExistUser = this.UserEntity.select('*', `WHERE ${this.UserEntity.tableName}.${this.UserEntity.login} = '${dto.login}' LIMIT 1`)
+		
+		if (alreadyExistUser.length) {
+			return ApiError.badRequest('User with this login already exist')
+		}
+		
 		const result = this.UserEntity.insert([dto.login, dto.password])
 		return ResponseService.created(result)
 	}
