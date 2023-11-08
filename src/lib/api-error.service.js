@@ -23,4 +23,8 @@ export class ApiError extends Error{
     static notFound(){
         return new ApiError(404, "Not Found", false)
     }
+    
+    static badRequest(message){
+        return new ApiError(400, message, false)
+    }
 }
